@@ -11,6 +11,12 @@ install:
 serve-example:
 	go run examples/main.go
 
+coverage:
+	go get golang.org/x/tools/cmd/cover
+	go get github.com/mattn/goveralls
+	go test -v -covermode=count -coverprofile=coverage.out
+	goveralls -coverprofile=coverage.out -service=travis-ci -repotoken ${COVERALLS_TOKEN}
+
 serve-watch-example:
 	go get github.com/codegangsta/gin
 	PORT=8001 gin --port ${PORT} --appPort 8001 --build ./examples

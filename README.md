@@ -3,6 +3,8 @@ GraphQL Multipart Middleware
 
 [![](https://img.shields.io/badge/godoc-reference-5272B4.svg)](https://godoc.org/github.com/lucassabreu/graphql-multipart-middleware)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1f0199e1dd364abcae45fd1f3de3cc25)](https://www.codacy.com/app/lucassabreu/graphql-multipart-middleware?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lucassabreu/graphql-multipart-middleware&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/lucassabreu/graphql-multipart-middleware.svg?branch=master)](https://travis-ci.org/lucassabreu/graphql-multipart-middleware)
+[![Coverage Status](https://coveralls.io/repos/github/lucassabreu/graphql-multipart-middleware/badge.svg?branch=master)](https://coveralls.io/github/lucassabreu/graphql-multipart-middleware?branch=master)
 
 This packages provide a implementation of the graphql multipart request spec created by [@jaydenseric](https://github.com/jaydenseric) to provide support for handling file uploads in a GraphQL server, [click here to see the spec](https://github.com/jaydenseric/graphql-multipart-request-spec).
 
