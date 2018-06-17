@@ -7,7 +7,7 @@ help: ## show this help
  	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 install: ## install package dependencies
-	go get -u -v ./...
+	go get -u -v -t ./...
 
 serve-example: ## start the example server
 	go run examples/main.go
@@ -15,6 +15,9 @@ serve-example: ## start the example server
 serve-watch-example: ## start the example server watching for changes
 	go get github.com/codegangsta/gin
 	PORT=8001 gin --port ${PORT} --appPort 8001 --build ./examples
+
+tests: ## run the package's tests
+	go test -v -race .
 
 coverage: ## calcs the coverage for the package
 	go get golang.org/x/tools/cmd/cover
